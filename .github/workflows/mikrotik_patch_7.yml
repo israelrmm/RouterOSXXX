@@ -29,7 +29,7 @@ env:
 
 jobs:
   Set_BuildTime:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     outputs:
       BUILD_TIME: ${{ steps.set_buildtime.outputs.BUILD_TIME }}
     steps:
@@ -39,7 +39,7 @@ jobs:
 
   Patch_RouterOS:
     needs: Set_BuildTime
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         arch: [x86,arm64]
