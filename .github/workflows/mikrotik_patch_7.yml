@@ -39,7 +39,7 @@ jobs:
 
   Patch_RouterOS:
     needs: Set_BuildTime
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         arch: [x86,arm64]
@@ -56,7 +56,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11' 
+        python-version: '3.10' 
 
     - name: Get latest routeros version
       id: get_latest
